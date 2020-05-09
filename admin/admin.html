@@ -324,6 +324,18 @@
 		parentBox.getElementsByClassName('name')[0].innerHTML = obj.parentElement.parentElement.getElementsByClassName('modal-body')[0].getElementsByTagName('input')[0].value
 		parentBox.getElementsByClassName('actual')[0].innerHTML = obj.parentElement.parentElement.getElementsByClassName('modal-body')[0].getElementsByTagName('input')[1].value + '.00'
 	}
+	function handleList() {
+		const apiList = [
+			{
+				name: '辣椒炒肉',
+				price: 13
+			},
+			{
+				name: '辣椒炒鸡蛋',
+				price: 13
+			}
+		]
+	}
 </script>
 <style>
 	.content_top_box {
