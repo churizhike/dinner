@@ -39,7 +39,7 @@
 		</div>
 		<div class="title">注册</div>
 		<div class="input">
-			<label for="regname">用户名</label>
+			<label for="regname">用户名（手机号）</label>
 			<input type="text" name="regname" id="regname">
 			<span class="spin"></span>
 		</div>
@@ -48,12 +48,12 @@
 			<input type="password" name="regpass" id="regpass">
 			<span class="spin"></span>
 		</div>
-		<div class="input">
+		<!-- <div class="input">
 			<label for="reregpass">确认密码</label>
 			<input type="password" name="reregpass" id="reregpass">
 			<span class="spin"></span>
-		</div>
-		<div class="button">
+		</div> -->
+		<div class="button sign">
 			<button>
 				<span>注册</span>
 			</button>
@@ -66,16 +66,66 @@
 <script src="js/index.js"></script>
 <script>
 	// 用户账号 zhangsan 密码 123456
+	// 管理员账号 churi 密码 123456
 	$(".login").click(function(){
 		const name = $("#name").val()
 		const psword = $("#pass").val()
 		sessionStorage.setItem('userName', name)
 		sessionStorage.setItem('userPsword', psword)
-		if (name === 'zhangsan' && psword === '123456') {
-			window.location.href = 'file:///C:/Users/Administrator/Desktop/dinner/user/user.html'
-			alert('登录成功')
+		const sendData = {
+			userName: name,
+			passWord: psword
 		}
-	});
+		$.ajax({
+			type : "POST",
+			url : 'http://192.168.31.248:6736/login/login', 
+			data : JSON.stringify(sendData),
+			// dataType: 'json',
+			success : function(obj){
+				if (obj === '恭喜您,登录成功') {
+					if (name === 'churi' && psword === '123456') {
+						window.location.href = 'file:///C:/Users/Administrator/Desktop/dinner/admin/admin.html'
+					} else {
+						window.location.href = 'file:///C:/Users/Administrator/Desktop/dinner/user/user.html'
+					}
+				} else {
+					alert(obj)
+				}
+			},
+			headers: {
+				"Content-Type":"application/json"
+			}
+		})
+	})
+	// 注册
+	$(".sign").click(function(){
+		const name = $("#regname").val()
+		const psword = $("#regpass").val()
+		// && typeof name === 'number' && String(name).length === 11
+		if (name !== '' && psword !== '') {
+			const sendData = {
+				userName: name,
+				passWord: psword,
+				role: 'consumer',
+				name: 'zan'
+			}
+			$.ajax({
+				type : "POST",
+				url : 'http://192.168.31.248:6736/login/regist', 
+				data : JSON.stringify(sendData),
+				// dataType: 'json',
+				success : function(obj){
+					alert(obj)
+					if (obj === '恭喜您,注册成功') {
+						window.location.href = 'file:///C:/Users/Administrator/Desktop/dinner/index.html'
+					}
+				},
+				headers: {
+					"Content-Type":"application/json"
+				}
+			})
+		}
+	})
 </script>
 
 </body>

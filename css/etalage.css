@@ -145,3 +145,7 @@ div.etalage_description.rtl{ direction:rtl; text-align:right }
 	float: none;
  }
 }
+
+.activeNav {
+	color: #2ca1d2 !important;
+}

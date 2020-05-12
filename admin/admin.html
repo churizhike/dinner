@@ -20,29 +20,14 @@
 <body>
 	<div class="header">
 		<div class="container">
-		  <div class="header_top">
-			<ul class="phone">
-				<li class="phone_left"><i class="mobile"> </i><span>1-200-346-2986</span></li>
-				<!-- <li class="phone_right">Free Ground Shipping for Products over ￥100</li> -->
+			<div class="header_top" style="width: 100%;">
+				<ul class="phone" style="width: 100%;">
+					<li class="phone_left"><i class="mobile"> </i><span>1-200-346-2986</span></li>
+					<li class="phone_right" style="float: right;margin-right: 10%;"><span class="mobile">欢迎： </span><span id="userName">处日先生</span></li>
+					<div class="clearfix"></div>
+				</ul>
 				<div class="clearfix"></div>
-			</ul>
-			<!-- <ul class="social">
-				 <li><a href=""> <i class="tw"> </i> </a></li>
-				 <li><a href=""><i class="fb"> </i> </a></li>
-				 <li><a href=""><i class="rss"> </i> </a></li>
-				 <li><a href=""><i class="msg"> </i> </a></li>
-				 <div class="clearfix"> </div>
-			</ul> -->
-			<ul class="account">
-				<li>我的账户</a></li>
-			</ul>
-			<ul class="shopping_cart" style="float: right;">
-			   <a href="#"><li class="shop_left"><i class="cart"> </i><span>合计</span></li></a>
-			   <a href="#"><li class="shop_right"><span>￥</span><span>0.00</span></li></a>
-			   <div class="clearfix"> </div>
-			</ul>
-			<div class="clearfix"></div>
-		</div>
+			</div>
 		<div class="header_bottom">
 		  <div class="header_nav">
       		<div class="logo">
@@ -67,10 +52,10 @@
 			        <!-- <li><a href="products.html">食物</a></li> -->
 			        <!-- <li><a href="store.html">Locate Store</a></li>
 			        <li><a href="club.html">Fan Club</a></li> -->
-			        <li><a href="business.html">商家</a></li>
+			        
 		          </ul>
-		          <ul class="login">
-		          	<a href="account.html"><li class="login_top"><i class="sign"> </i><span>登出</span></li></a>
+		          <ul class="login" style="cursor: pointer;">
+		          	<a><li class="login_top"><i class="sign"> </i><span>登出</span></li></a>
 		            <!-- <a href="register.html"><li class="login_bottom"><i class="register"> </i><span>Register</span></li></a> -->
 		          </ul>
 			      <div class="clearfix"></div>
@@ -93,7 +78,7 @@
 		   	   <div class="category_box">
 		   	  	<h3 class="cate_head">点菜</h3>
 		   	     <ul class="category">
-					<li class="activeNav"><a href="./dinner/jiaozi.html" style="color: aqua;">饺子类</a></li>
+					<li><a href="./admin.html" class="activeNav">饺子类</a></li>
 					<li><a href="./dinner/noodles.html">面类</a></li>
 			   	  	<li><a href="./dinner/gaifan.html">盖饭类</a></li>
 			   	  	<li><a href="./dinner/kaochuan.html">烤串类</a></li>
@@ -101,7 +86,6 @@
 			   	  	<li><a href="./dinner/yuxia.html">鱼虾类</a></li>
 			   	  	<li><a href="./dinner/tang.html">汤类</a></li>
 			   	  	<li><a href="./dinner/ganguo.html">干锅系列</a></li>
-			   	  	<li><a href="./dinner/jiushuai.html">酒水饮料</a></li>
 		   	     </ul>
 		   	   </div>
 		   	   <!-- <ul class="product_reviews">
@@ -115,10 +99,6 @@
 						上传菜品
 					</button>
 				</div>
-				<!-- Button trigger modal -->
-
-				
-				<!-- Modal -->
 				<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
 					<div class="modal-dialog" role="document">
 					<div class="modal-content">
@@ -134,14 +114,8 @@
 							</div>
 							<div class="input-group" style="margin-top: 20px;">
 								<span class="input-group-addon" id="basic-addon2">菜品价格</span>
-								<input type="text" class="form-control" placeholder="Recipient's username" aria-describedby="basic-addon2">
+								<input type="text" class="form-control" placeholder="Recipient's price" aria-describedby="basic-addon2">
 							</div>
-							<!-- <button type="button" class="btn btn-default" style="margin-top: 20px;">上传照片</button>
-							<div class="form-group">
-								<label for="exampleInputFile">File input</label>
-								<input type="file" id="exampleInputFile">
-								<p class="help-block">Example block-level help text here.</p>
-							</div> -->
 						</div>
 						<div class="modal-footer">
 							<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
@@ -150,16 +124,15 @@
 					</div>
 					</div>
 				</div>
-		   	    <div class="tlinks">Collect from <a href="http://www.cssmoban.com/"  title="网站模板">网站模板</a></div>
 		   	    <div class="row content_bottom">
-			   	   <div class="col-md-3 content_top_box">
+			   	   <!-- <div class="col-md-3 content_top_box">
 			   	   	<div class="content_box">
 			   	   	  	<div class="view view-fifth">
 			   	   	     <img src="../images/p1.jpg" class="img-responsive" alt=""/>
 				   	   	 <div class="content_box-grid">
 				   	   	  <p class="name m_1">马家酸汤牛肉水饺</p>
 				   	   	  <div class="price">价格:￥
-							<span class="actual">12.00</span>
+							<span class="actual">12</span>
 						  </div>
 						  <div class="but1" style="margin-top: 10px;">
 							<div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -179,12 +152,6 @@
 												<span class="input-group-addon" id="basic-addon2">菜品价格</span>
 												<input type="text" class="form-control" placeholder="Recipient's username" aria-describedby="basic-addon2">
 											</div>
-											<!-- <button type="button" class="btn btn-default" style="margin-top: 20px;">上传照片</button>
-											<div class="form-group">
-												<label for="exampleInputFile">File input</label>
-												<input type="file" id="exampleInputFile">
-												<p class="help-block">Example block-level help text here.</p>
-											</div> -->
 										</div>
 										<div class="modal-footer">
 											<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
@@ -214,127 +181,144 @@
 									</div>
 								</div>
 							</div>
-							<a href="#" style="margin-left: 20px;" data-toggle="modal" data-target="#myModal2">删除</a>
+							<a href="#" style="margin-left: 20px;" class="deleteBtn" data-toggle="modal" data-target="#myModal2">删除</a>
 						  </div>
 			             </div>
 				   	   	</div>
 			   	   	  </div>
-			   	   </div>
-			   	   <div class="col-md-3 content_top_box">
-			   	   	  <div class="content_box">
-			   	   	  	<div class="view view-fifth">
-			   	   	     <img src="../images/p4.jpg" class="img-responsive" alt=""/>
-				   	   	 <div class="content_box-grid">
-				   	   	  <p class="m_1">香菇肉片盖饭</p>
-				   	   	  <div class="price">价格:￥
-							<span class="actual">12.00</span>
-						  </div>
-						  <div class="but1" style="margin-top: 10px;">
-							<a href="#" style="margin-left: 0px;color: #2ca1d2;" onclick="clickEdit(this)">编辑</a>
-							<a href="#" style="margin-left: 20px;" onclick="clickBuy(this)">删除</a>
-						  </div>
-						 </div>
-						</div>
-			   	   	   </a>
-			   	   	  </div>
-			   	   </div>
-			   	   <div class="col-md-3 content_top_box">
-			   	   	 <div class="content_box">
-			   	   	  	<div class="view view-fifth">
-			   	   	     <img src="../images/p3.jpg" class="img-responsive" alt=""/>
-				   	   	 <div class="content_box-grid">
-				   	   	  <p class="m_1">烤香肠</p>
-				   	   	  <div class="price">价格:￥
-							<span class="actual">12.00</span>
-						  </div>
-						  <div class="but1" style="margin-top: 10px;">
-							<a href="#" style="margin-left: 0px;color: #2ca1d2;" onclick="clickEdit(this)">编辑</a>
-							<a href="#" style="margin-left: 20px;" onclick="clickBuy(this)">删除</a>
-						  </div>
-			             </div>
-				   	   	</div>
-			   	   	   </a>
-			   	   	  </div>
-			   	   </div>
-			   	   <div class="col-md-3 content_top_box">
-			   	   	   <div class="content_box">
-			   	   	  	<div class="view view-fifth">
-			   	   	     <img src="../images/p2.jpg" class="img-responsive" alt=""/>
-				   	   	 <div class="content_box-grid">
-				   	   	  <p class="m_1">泡椒烤鱼</p>
-				   	   	  <div class="price">价格:￥
-							<span class="actual">12.00</span>
-						  </div>
-						  <div class="but1" style="margin-top: 10px;">
-							<a href="#" style="margin-left: 0px;color: #2ca1d2;" onclick="clickBuy(this)">编辑</a>
-							<a href="#" style="margin-left: 20px;" onclick="clickBuy(this)">删除</a>
-						  </div>
-				   	   	</div>
-			   	   	   </a>
-			   	   	  </div>
-			   	   </div>
-			   </div>
+			   	   </div> -->
 		    </div>
 		   </div>
 		</div>
 	</div>
 </body>
 <script>
-	function clickBuy(obj) {
-		var numInput = obj.parentElement.getElementsByClassName('num')[0].innerHTML
-		var price = obj.parentElement.parentElement.getElementsByClassName('actual')[0].innerHTML
-		var countInput = document.getElementsByClassName('shop_right')[0].getElementsByTagName('span')[1]
-		var count = numInput * price
-		countInput.innerHTML = Number(countInput.innerHTML) + count + '.00'
-	}
-	function clickSub (obj) {
-		var numInput = obj.parentElement.getElementsByClassName('num')[0]
-		console.log(numInput.innerHTML)
-		if (Number(numInput.innerHTML) > 0) {
-			numInput.innerHTML = numInput.innerHTML - 1
-		}
-	}
-	function clickAdd (obj) {
-		var numInput = obj.parentElement.getElementsByClassName('num')[0]
-		numInput.innerHTML++
-	}
-	$('#myModal').modal({
-		keyboard: true
+	$(function () {
+		$(".login").click(function() {
+			console.log(8888)
+			window.location.href = 'file:///C:/Users/Administrator/Desktop/dinner/index.html'
+			sessionStorage.removeItem('userName')
+			sessionStorage.removeItem('userPsword')
+			alert('退出登录成功')
+		})
+		window.onload = handleList()
+		$('.userName').innerHTML = sessionStorage.getItem('userName')
 	})
+	function clickEdit(obj) {
+		obj.parentElement.getElementsByClassName('modal-body')[0].getElementsByTagName('input')[0].value = obj.parentElement.parentElement.getElementsByClassName('name')[0].innerHTML
+		obj.parentElement.getElementsByClassName('modal-body')[0].getElementsByTagName('input')[1].value = obj.parentElement.parentElement.getElementsByClassName('actual')[0].innerHTML.split('.')[0]
+	}
 	function closeModal(obj) {
-		alert('菜品上传成功')
+		
 		var dinnerName = document.getElementsByClassName('modal-body')[0].getElementsByTagName('input')[0]
 		var dinnerPrice = document.getElementsByClassName('modal-body')[0].getElementsByTagName('input')[1]
-		console.log(dinnerName.value, dinnerPrice.value, dinnerPrice)
-		var dinnerHtml = $("<div class='col-md-3'><div class='content_box'><div class='view view-fifth'><img src='../images/p1.jpg' class='img-responsive'/><div class='content_box-grid'><p class='m_1'>"+dinnerName.value+"</p><div class='price'>价格:￥<span class='actual'>"+dinnerPrice.value+".00</span></div><div class='but1' style='margin-top: 10px;'><span class='glyphicon glyphicon-minus' aria-hidden='true' style='font-size: 22px;cursor: pointer;'' onclick='clickSub(this)'></span><span class='num'>0</span><span class='glyphicon glyphicon-plus' style='font-size: 22px;cursor: pointer;' aria-hidden='true' onclick='clickAdd(this)'></span><a href='#' style='margin-left: 20px;' onclick='clickBuy(this)'>立即购买</a></div></div></div></div></div>")
-		dinnerHtml.appendTo($('#content_bottom'))
-		var a = $('<div>prepend添加的节点</div>')
-		dinnerHtml.appendTo(document.getElementsByClassName('content_bottom')[0])
-		console.log(dinnerHtml)
+		if (dinnerName !== '' && dinnerPrice !== '') {
+			const sendData = {
+				mealName: dinnerName.value,
+				mealPrice: dinnerPrice.value,
+				mealType: 'jiaozi'
+			}
+			$.ajax({
+				type : "POST",
+				url : 'http://192.168.31.248:6736/menu/add', 
+				data : JSON.stringify(sendData),
+				// dataType: 'json',
+				success : function(obj){
+					handleList()
+				},
+				headers: {
+					"Content-Type":"application/json"
+				}
+			})
+		}
 	}
-	function clickEdit(obj) {
-		obj.parentElement.getElementsByClassName('modal-body')[0].getElementsByTagName('input')[0].value = '马家酸汤牛肉水饺'
-		obj.parentElement.getElementsByClassName('modal-body')[0].getElementsByTagName('input')[1].value = 12
-		console.log(obj)
+	function deleteDinner(that) {
+		const parentBox = that.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement
+		const dinnerName = parentBox.getElementsByClassName('name')[0].innerHTML
+		$.get('http://192.168.31.248:6736/menu/get', function(obj) {
+			if (obj['jiaozi']) {
+				obj['jiaozi'].map(item => {
+					if (item.mealName === dinnerName) {
+						$.ajax({
+							type : "GET",
+							url : 'http://192.168.31.248:6736/menu/delete', 
+							// data : JSON.stringify(sendData),
+							// dataType: 'json',
+							success : function(obj){
+								handleList()
+							},
+							headers: {
+								"Content-Type":"application/json",
+								"mealNumber": item.mealNumber
+							}
+						})
+					}
+				})
+			}
+		}, 'json')
 	}
 	function editDinner(obj) {
 		const editName = obj.parentElement.parentElement.getElementsByClassName('modal-body')[0].getElementsByTagName('input')[0].value
-		const parentBox = obj.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement
-		console.log(editName, obj.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.getElementsByClassName('name')[0])
-		parentBox.getElementsByClassName('name')[0].innerHTML = obj.parentElement.parentElement.getElementsByClassName('modal-body')[0].getElementsByTagName('input')[0].value
-		parentBox.getElementsByClassName('actual')[0].innerHTML = obj.parentElement.parentElement.getElementsByClassName('modal-body')[0].getElementsByTagName('input')[1].value + '.00'
+		const editPrice = obj.parentElement.parentElement.getElementsByClassName('modal-body')[0].getElementsByTagName('input')[1].value
+		const sourceName = obj.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.getElementsByClassName('name')[0].innerHTML
+		$.get('http://192.168.31.248:6736/menu/get', function(obj) {
+			if (obj['jiaozi']) {
+				obj['jiaozi'].map(item => {
+					if (item.mealName === sourceName) {
+						const sendData = {
+							mealName: editName,
+							mealPrice: editPrice,
+							mealNumber: item.mealNumber,
+							mealType: 'jiaozi'
+						}
+						$.ajax({
+							type : "POST",
+							url : 'http://192.168.31.248:6736/menu/update', 
+							data : JSON.stringify(sendData),
+							// dataType: 'json',
+							success : function(obj){
+								handleList()
+							},
+							headers: {
+								"Content-Type":"application/json",
+								"mealNumber": item.mealNumber
+							}
+						})
+					}
+				})
+			}
+		}, 'json')
 	}
 	function handleList() {
-		const apiList = [
-			{
-				name: '辣椒炒肉',
-				price: 13
-			},
-			{
-				name: '辣椒炒鸡蛋',
-				price: 13
-			}
-		]
+		$.get('http://192.168.31.248:6736/menu/get', function(obj) {
+			var imgArr = [
+				'../images/p1.jpg',
+				'../images/p2.jpg',
+				'../images/p2.jpg',
+				'../images/p2.jpg',
+				'../images/p2.jpg',
+				'../images/p2.jpg'
+			]
+			document.getElementsByClassName('content_bottom')[0].innerHTML = ''
+			obj['jiaozi'].map((item, index) => {
+				const parentBox1 = $("<div class='col-md-3 content_top_box'></div>")
+				const parentBox2 = $("<div class='content_box'></div>")
+				const parentBox3 = $("<div class='view view-fifth'></div>")
+				const parentBox4 = $('<div class="content_box-grid"></div>')
+				const img = $('<img src="../images/p'+parseInt(Math.random()*20+0)+'.jpg" class="img-responsive" style="width:187px;height:127px" alt=""/>')
+				const name = $('<p class="name m_1">'+item.mealName+'</p>')
+				const price = $('<div class="price">价格:￥<span class="actual">'+item.mealPrice+'</span></div>')
+				const modal = $('<div class="but1" style="margin-top: 10px;"><div class="modal fade" id="myModal'+index+'" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"><div class="modal-dialog" role="document"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button><h4 class="modal-title" id="myModalLabel">本菜品<span style="font-size: 12px;">（当前分类：饺子）</span></h4><h4></h4></div><div class="modal-body"><div class="input-group"><span class="input-group-addon" id="basic-addon2">菜品名称</span><input type="text" class="form-control" id="" placeholder="Recipients username" aria-describedby="basic-addon2"></div><div class="input-group" style="margin-top: 20px;"><span class="input-group-addon" id="basic-addon2">菜品价格</span><input type="text" class="form-control" placeholder="Recipients username" aria-describedby="basic-addon2"></div></div><div class="modal-footer"><button type="button" class="btn btn-default" data-dismiss="modal">取消</button><button type="button" class="btn btn-primary" data-dismiss="modal" onclick="editDinner(this)">确定</button></div></div></div></div><a href="#" style="margin-left: 0px;color: #2ca1d2;" data-toggle="modal" data-target="#myModal'+index+'" onclick="clickEdit(this)">编辑</a><div class="modal fade" id="myModalIn'+index+'" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"><div class="modal-dialog modal-sm" role="document"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button><h4 class="modal-title" id="myModalLabel">提示：</span></h4><h4></h4></div><div class="modal-body"><div class="input-group"><span class="" id="basic-addon2">确认删除？</span></div></div><div class="modal-footer" style="margin-top: 0;"><button type="button" class="btn btn-default" data-dismiss="modal">取消</button><button type="button" class="btn btn-primary" data-dismiss="modal" onclick="deleteDinner(this)">确定</button></div></div></div></div><a href="#" style="margin-left: 20px;" class="deleteBtn" data-toggle="modal" data-target="#myModalIn'+index+'">删除</a></div>')
+				img.appendTo(parentBox3)
+				name.appendTo(parentBox4)
+				price.appendTo(parentBox4)
+				modal.appendTo(parentBox4)
+				parentBox4.appendTo(parentBox3)
+				parentBox3.appendTo(parentBox2)
+				parentBox2.appendTo(parentBox1)
+				parentBox1.appendTo(document.getElementsByClassName('content_bottom')[0])
+			})
+		}, 'json')
 	}
 </script>
 <style>
@@ -345,7 +329,7 @@
 		padding: 1em 1em;
 	}
 	.activeNav {
-		color: #2ca1d2;
+		color: #2ca1d2 !important;
 	}
 </style>
 </html>

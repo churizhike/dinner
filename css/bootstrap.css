@@ -13,6 +13,9 @@ html {
 body {
   margin: 0;
 }
+.activeNav {
+  color: #2ca1d2 !important;
+}
 article,
 aside,
 details,

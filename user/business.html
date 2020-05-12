@@ -25,27 +25,12 @@
 				<!-- <li class="phone_right">Free Ground Shipping for Products over ￥100</li> -->
 				<div class="clearfix"></div>
 			</ul>
-			<!-- <ul class="social">
-				 <li><a href=""> <i class="tw"> </i> </a></li>
-				 <li><a href=""><i class="fb"> </i> </a></li>
-				 <li><a href=""><i class="rss"> </i> </a></li>
-				 <li><a href=""><i class="msg"> </i> </a></li>
-				 <div class="clearfix"> </div>
-			</ul> -->
-			<ul class="account">
-				<li><a href="account.html">我的账户</a></li>
-			</ul>
-			<ul class="shopping_cart" style="float: right;">
-			   <a href="#"><li class="shop_left"><i class="cart"> </i><span>合计</span></li></a>
-			   <a href="#"><li class="shop_right"><span>￥</span><span>0.00</span></li></a>
-			   <div class="clearfix"> </div>
-			</ul>
 			<div class="clearfix"></div>
 		</div>
 		<div class="header_bottom">
 		  <div class="header_nav">
       		<div class="logo">
-				<a href="user.html"><img src="../images/logo.png" alt=""/><br></a>
+				<a><img src="../images/logo.png" alt=""/><br></a>
 			 </div>
 			 <nav class="navbar navbar-default menu" role="navigation"><h3 class="nav_right"><a href="index.html"><img src="../images/logo.png" class="img-responsive" alt=""/></a></h3>
 			  <div class="container-fluid">
@@ -95,22 +80,14 @@
 		   	   <div class="category_box">
 		   	  	<h3 class="cate_head">点菜</h3>
 		   	     <ul class="category">
-					<li><a href="#">饺子类</a></li>
-					<li><a href="#">面类</a></li>
-			   	  	<li><a href="#">盖饭类</a></li>
-			   	  	<li><a href="#">烤串类</a></li>
-			   	  	<li><a href="#">家常小炒类</a></li>
-			   	  	<li><a href="#">鱼虾类</a></li>
-			   	  	<li><a href="#">汤类</a></li>
-			   	  	<li><a href="#">干锅系列</a></li>
-			   	  	<li><a href="#">酒水饮料</a></li>
-			   	  	<!-- <li><a href="#">Home Goods</a></li>
-			   	  	<li><a href="#">Jewelry</a></li>
-			   	  	<li><a href="#">Lingerie</a></li>
-			   	  	<li><a href="#">Music</a></li>
-			   	  	<li><a href="#">Office Supplies</a></li>
-			   	  	<li><a href="#">Printing</a></li>
-			   	  	<li><a href="#">Software</a></li> -->
+					<li><a href="../user/dinner/jiaozi.html">饺子类</a></li>
+					<li><a href="./dinner/noodles.html">面类</a></li>
+			   	  	<li><a href="./dinner/gaifan.html">盖饭类</a></li>
+			   	  	<li><a href="./dinner/kaochuan.html">烤串类</a></li>
+			   	  	<li><a href="./dinner/xiaochao.html">家常小炒类</a></li>
+			   	  	<li><a href="./dinner/yuxia.html">鱼虾类</a></li>
+			   	  	<li><a href="./dinner/tang.html">汤类</a></li>
+			   	  	<li><a href="./dinner/ganguo.html">干锅系列</a></li>
 		   	     </ul>
 		   	   </div>
 		   	   <ul class="product_reviews">
@@ -134,6 +111,7 @@
 		if (!sessionStorage.getItem('userName')) {
 			window.location.href = 'file:///C:/Users/Administrator/Desktop/dinner/index.html'
 		}
+		$('.userName').innerHTML = sessionStorage.getItem('userName')
 	})
 	$(".login").click(function() {
 		window.location.href = 'file:///C:/Users/Administrator/Desktop/dinner/index.html'
